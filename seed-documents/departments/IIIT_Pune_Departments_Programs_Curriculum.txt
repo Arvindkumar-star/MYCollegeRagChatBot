@@ -1,0 +1,263 @@
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY PUNE (IIIT Pune)
+Departments, Programs & Curriculum Guide
+Source: Official IIIT Pune website, scribd, careers360
+Last Updated: 2024
+
+=======================================================================
+ACADEMIC DEPARTMENTS
+=======================================================================
+
+1. Department of Computer Science and Engineering (CSE)
+2. Department of Electronics and Communication Engineering (ECE)
+3. Department of Applied Sciences and Humanities (AS&H)
+
+=======================================================================
+B.TECH CSE — CURRICULUM OVERVIEW
+=======================================================================
+
+Duration: 4 Years (8 Semesters)
+Total Credits: ~160 credits
+
+Semester 1 (First Year):
+- Mathematics I (Calculus & Linear Algebra)
+- Physics / Chemistry (based on group)
+- Introduction to Programming (Python / C)
+- Engineering Drawing
+- Communication Skills (English)
+- Environmental Science
+- Lab: Programming Lab
+
+Semester 2 (First Year):
+- Mathematics II (Discrete Mathematics)
+- Physics / Chemistry (alternates from Sem 1)
+- Data Structures
+- Digital Electronics
+- Engineering Workshop / Mechanics
+- Lab: Data Structures Lab, Digital Electronics Lab
+
+Semester 3 (Second Year):
+- Mathematics III (Probability & Statistics)
+- Object-Oriented Programming (Java / C++)
+- Computer Organization and Architecture
+- Operating Systems
+- Database Management Systems (DBMS)
+- Labs: OOP Lab, OS Lab, DBMS Lab
+
+Semester 4 (Second Year):
+- Design and Analysis of Algorithms
+- Computer Networks
+- Software Engineering
+- Theory of Computation
+- Elective I
+- Labs: Networking Lab, Project Lab
+
+Semester 5 (Third Year):
+- Compiler Design
+- Artificial Intelligence
+- Machine Learning
+- Elective II
+- Elective III
+- Mini Project
+
+Semester 6 (Third Year):
+- Information Security / Cyber Security
+- Cloud Computing / Distributed Systems
+- Deep Learning
+- Elective IV
+- Elective V
+- Internship / Research Project
+
+Semester 7 (Fourth Year):
+- Major Project (Part I)
+- Elective VI
+- Elective VII
+- Seminar
+
+Semester 8 (Fourth Year):
+- Major Project (Part II / Final)
+- Technical Communication
+
+Popular Electives (CSE):
+- Natural Language Processing (NLP)
+- Computer Vision
+- IoT (Internet of Things)
+- Blockchain Technology
+- Robotics
+- Data Mining & Big Data Analytics
+- Game Development
+
+=======================================================================
+B.TECH ECE — CURRICULUM OVERVIEW
+=======================================================================
+
+Duration: 4 Years (8 Semesters)
+Total Credits: ~160 credits
+
+Core Areas:
+- Signals and Systems
+- Analog and Digital Electronics
+- Electromagnetic Theory
+- Microprocessors and Microcontrollers
+- VLSI Design
+- Digital Signal Processing (DSP)
+- Communication Systems (Analog + Digital)
+- Embedded Systems
+- Wireless Communication
+- Antenna and Wave Propagation
+- Control Systems
+- VLSI Testing and Verification
+
+Popular Electives (ECE):
+- Robotics and Automation
+- 5G Technology
+- Nanoelectronics
+- Cognitive Radio
+- Image and Video Processing
+- RF and Microwave Engineering
+- Machine Learning for ECE
+- Cyber-Physical Systems
+
+=======================================================================
+M.TECH PROGRAMS
+=======================================================================
+
+M.Tech in CSE — Specialization: Artificial Intelligence
+Duration: 2 Years (4 Semesters)
+Total Credits: 54 credits
+Intake: ~15–20 students per year
+
+Admission:
+- Through CCMT (Centralized Counseling for M.Tech/MArch/MPlan/MPharma)
+- Requires valid GATE score (CS/DA papers)
+- GATE stipend of ₹12,400/month available for eligible students
+
+Curriculum Highlights:
+- Advanced Machine Learning
+- Deep Learning and Neural Networks
+- Computer Vision
+- Natural Language Processing
+- Reinforcement Learning
+- AI in Healthcare / Finance applications
+- Research Methodology
+- Dissertation (Thesis) — Semester 3 & 4
+
+Research Focus Areas (CSE):
+- Artificial Intelligence and Machine Learning
+- Natural Language Processing
+- Computer Vision and Image Processing
+- Cybersecurity and Network Security
+- Cloud Computing and IoT
+- Data Science and Big Data
+- Blockchain and Distributed Systems
+
+---
+
+M.Tech in ECE — Specialization: Microelectronics & VLSI Design
+Duration: 2 Years (4 Semesters)
+Total Credits: 54 credits
+Intake: ~10–15 students per year
+
+Admission:
+- Through CCMT with valid GATE score (EC paper)
+- GATE stipend: ₹12,400/month
+
+Curriculum Highlights:
+- Advanced VLSI Design
+- ASIC Design Flow
+- CAD Algorithms for VLSI
+- Low-Power VLSI Design
+- VLSI Testing and Verification
+- Embedded Systems Design
+- SoC (System on Chip) Design
+- Dissertation (Thesis)
+
+Research Focus Areas (ECE):
+- VLSI and Nanoelectronics
+- 5G/6G Wireless Communication
+- Embedded Systems and IoT
+- Robotics and Cyber-Physical Systems
+- Antenna Design and EM Waves
+- Signal and Image Processing
+
+=======================================================================
+Ph.D. PROGRAM
+=======================================================================
+
+Areas: CSE and ECE (same research areas as M.Tech)
+
+Admission Process:
+- Conducted TWICE a year: Autumn Semester (July) and Spring Semester (January)
+- Step 1: Online Application at iiitp.ac.in
+- Step 2: Shortlisting based on GATE / NET / JRF score + academic record
+- Step 3: Written Test
+- Step 4: Technical Interview with faculty panel
+- Step 5: Final merit list and seat allotment
+
+Eligibility:
+- M.Tech/M.E./M.S. in relevant field (CSE/ECE/IT/EEE) with 60%+ marks
+- Candidates with B.Tech + GATE (exceptional profile) may be considered for direct Ph.D.
+
+Fellowship Schemes:
+1. Institute Fellowship: ₹31,000/month (JRF), ₹35,000/month (SRF) — 5 years
+2. Visvesvaraya Ph.D. Scheme (MeitY): Additional benefits for IT/electronics research
+3. Sponsored: Fee paid by organization; salary as per employment contract
+4. Part-time Ph.D.: Available for working professionals
+
+Duration: Minimum 3 years (typically 4–5 years)
+
+=======================================================================
+FACULTY
+=======================================================================
+
+IIIT Pune has a growing faculty with Ph.D.s from IITs, IISc, and reputed international universities. Many faculty members:
+- Are actively involved in funded research projects (DST, MeitY, SERB, DRDO, ISRO)
+- Have publications in IEEE, ACM, Springer, Elsevier journals
+- Have industry collaborations with companies like TCS, Infosys, NVIDIA, Qualcomm
+
+Faculty-Student Ratio: Approximately 1:15 (improving as institute grows)
+
+=======================================================================
+ACADEMIC POLICIES
+=======================================================================
+
+Attendance:
+- Minimum 75% attendance mandatory in each course to appear for exams
+- Students with less than 75% may be debarred from semester exams
+
+Grading System:
+- 10-point CGPA scale
+- Minimum CGPA of 5.0 required to pass / continue
+- Minimum CGPA of 6.0 required for placement eligibility in most companies
+
+Examinations:
+- Mid-Semester Exam: ~30% weightage
+- End-Semester Exam: ~50% weightage
+- Assignments/Labs/Quizzes: ~20% weightage
+
+Backlogs:
+- Students can re-appear in failed courses in subsequent semesters
+- Maximum attempts allowed: Usually 3 attempts per course
+
+=======================================================================
+RESEARCH AND INNOVATION
+=======================================================================
+
+Research Centers:
+- Center for AI and Data Science
+- Center for Embedded Systems and VLSI
+- Innovation Lab (Startup Incubation Support)
+
+Funded Projects:
+- Projects from DST (Department of Science and Technology)
+- MeitY (Ministry of Electronics and IT) funded projects
+- DRDO collaborations
+- Industry-sponsored research
+
+Publications:
+- Students and faculty publish in IEEE Transactions, ACM conferences, Springer journals
+
+National/International Competitions:
+- Students participate in Smart India Hackathon (SIH)
+- ACM-ICPC (competitive programming)
+- IEEE conferences and paper presentations
+- DRDO/ISRO technical competitions

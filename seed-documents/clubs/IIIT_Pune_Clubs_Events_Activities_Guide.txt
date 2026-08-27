@@ -1,0 +1,193 @@
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY PUNE (IIIT Pune)
+Student Clubs, Events & Campus Activities Guide
+Source: Official IIIT Pune website, student community pages, campus reports
+Last Updated: 2024
+
+=======================================================================
+OVERVIEW
+=======================================================================
+
+IIIT Pune has a vibrant student community with 15+ active clubs covering technical, cultural, sports, and social domains. Despite being a relatively young institute (est. 2016), the student community has built a rich campus culture.
+
+=======================================================================
+TECHNICAL CLUBS
+=======================================================================
+
+1. COMPETITIVE PROGRAMMING CLUB (CPC)
+   - Focus: Competitive coding, algorithm solving
+   - Platforms: Codeforces, LeetCode, CodeChef, AtCoder
+   - Activities: Weekly contests, coaching sessions, team formation for ICPC
+   - Achievement: IIIT Pune students have achieved Global Rank < 500 on Codeforces
+   - Contact: cpc@iiitp.ac.in
+
+2. ARTIFICIAL INTELLIGENCE & MACHINE LEARNING CLUB (AIMl)
+   - Focus: ML/DL projects, Kaggle competitions, research paper reading
+   - Activities: Workshop series, Kaggle team competitions, guest talks
+   - Projects: NLP tools, computer vision applications, recommendation systems
+
+3. ROBOTICS CLUB
+   - Focus: Hardware + software robotics, embedded systems
+   - Activities: Line-follower, maze-solver robots, national robotics competitions
+   - Collaboration: Robotics competitions at IIT Bombay, NIT events
+
+4. CYBERSECURITY CLUB (Infosec / CTF Team)
+   - Focus: Capture The Flag (CTF) competitions, ethical hacking
+   - Platforms: HackTheBox, PicoCTF, TryHackMe
+   - Achievement: Participated in national and international CTF events
+
+5. WEB DEVELOPMENT CLUB
+   - Focus: Full-stack development, open source contribution
+   - Activities: Hackathons, building tools for campus use, GitHub projects
+
+6. ELECTRONICS CLUB
+   - Focus: Circuit design, PCB design, Arduino/Raspberry Pi projects
+   - Activities: Hardware projects, workshops for beginners
+
+7. OPEN SOURCE CLUB
+   - Focus: Contributing to open-source projects (GitHub), GSoC preparation
+   - Achievement: Students have received Google Summer of Code (GSoC) selections
+
+=======================================================================
+CULTURAL CLUBS
+=======================================================================
+
+8. DRAMATICS CLUB (NAATAK)
+   - Focus: Street plays, stage performances, one-act plays
+   - Events: Performances during Iconclave, intra-college drama competitions
+
+9. MUSIC CLUB
+   - Focus: Instrumental and vocal music
+   - Instruments: Guitar, tabla, keyboard, drums available
+   - Events: Open mic nights, cultural evenings, Iconclave performances
+
+10. DANCE CLUB
+    - Focus: Western dance (freestyle, hip-hop), classical Indian dance forms
+    - Events: Freshers' welcome, Iconclave, inter-college competitions
+
+11. FINE ARTS CLUB
+    - Focus: Painting, sketching, digital art, poster design
+    - Events: Art exhibitions, campus beautification projects, poster competitions
+
+12. PHOTOGRAPHY CLUB
+    - Focus: Campus photography, event documentation, photo walks
+    - Events: Photo contests, workshops on DSLR and mobile photography
+
+13. LITERARY CLUB (Ink & Quill)
+    - Focus: Creative writing, poetry, book discussions
+    - Activities: Writing competitions, literary magazines, quizzes
+
+=======================================================================
+SPORTS CLUBS
+=======================================================================
+
+14. CRICKET CLUB
+    - Annual inter-batch cricket tournament
+    - Practice sessions on campus ground
+
+15. FOOTBALL CLUB
+    - Inter-college football matches
+    - Campus football ground available
+
+16. BASKETBALL CLUB
+    - Regular practice on campus basketball court
+    - Inter-department tournaments
+
+Other Sports:
+- Badminton, Volleyball, Table Tennis clubs/informal groups
+- Annual Sports Meet organized every year
+
+=======================================================================
+SOCIAL / SERVICE CLUBS
+=======================================================================
+
+17. NSS (National Service Scheme)
+    - Social work activities: Tree plantation, literacy drives, blood donation camps
+    - Annual Special Camp (7 days) at adopted village
+
+18. ENTREPRENEURSHIP CELL (E-Cell)
+    - Focus: Startup culture, entrepreneurship awareness
+    - Events: Startup weekends, investor talks, idea pitching competitions
+    - Ties with IIIT Pune's innovation lab
+
+=======================================================================
+ANNUAL EVENTS
+=======================================================================
+
+1. ICONCLAVE — Annual Technical & Cultural Festival
+   - Duration: 2–3 days
+   - Events include:
+     * Hackathon (24-hour coding marathon)
+     * Robotics competition
+     * CTF (Capture The Flag) cybersecurity contest
+     * Coding competition (individual + team)
+     * Cultural performances (music, dance, drama)
+     * Guest lectures by industry leaders
+     * Gaming tournaments
+     * Photography contest
+     * Debate and quiz competitions
+   - Participation: Students from colleges across Maharashtra and beyond
+
+2. FRESHERS' WELCOME (Orientation)
+   - Held in August/September for new B.Tech and M.Tech students
+   - Introduction to clubs, faculty, and senior students
+   - Cultural performances and icebreakers
+
+3. FAREWELL (Seniors' Send-off)
+   - Organized by 3rd year students for departing 4th year students
+   - Cultural evening and awards
+
+4. SPORTS MEET
+   - Annual inter-batch/department sports competition
+   - Events: Cricket, football, basketball, athletics, indoor games
+
+5. TECHNICAL WORKSHOPS
+   - Conducted throughout the year by clubs and departments
+   - Topics: AI/ML, web dev, embedded systems, competitive programming
+   - Guest speakers from IITs, industry, startups
+
+6. PLACEMENT TRAINING WORKSHOPS
+   - Aptitude training sessions
+   - Mock interviews
+   - Resume building workshops
+   - Coding bootcamps (6–8 weeks before placement season)
+
+=======================================================================
+STUDENT GOVERNANCE
+=======================================================================
+
+Student Council:
+- Elected body representing students across all years
+- Acts as bridge between student community and administration
+- Roles: President, Vice-President, Secretary, Cultural Secretary, Sports Secretary, Technical Secretary
+
+Hostel Committee:
+- Manages hostel-related issues, mess quality feedback
+
+Mess Committee:
+- Student representatives who oversee mess quality and suggest improvements
+
+Anti-Ragging Committee:
+- Student representatives as part of institute anti-ragging policy
+- Contact for ragging complaints: antiragging@iiitp.ac.in
+
+=======================================================================
+ACHIEVEMENTS & RECOGNITION
+=======================================================================
+
+- Students have cleared GATE with top ranks (AIR < 100 in CSE/ECE)
+- Students placed at FAANG companies (Amazon, Google, Nvidia)
+- GSoC selections (Google Summer of Code)
+- IEEE conference paper publications by B.Tech students
+- Smart India Hackathon (SIH) — finalists
+- Winner in several IIT-organized hackathons and coding competitions
+
+=======================================================================
+HOW TO JOIN CLUBS
+=======================================================================
+
+- Club membership drives are held at the beginning of each semester
+- First-year students are especially encouraged to join in Semester 1
+- No prior experience required for most clubs
+- Some technical clubs hold a basic test/interview for advanced members
+- All activities are voluntary and free of charge
+- Club meetings typically held on weekday evenings or weekends

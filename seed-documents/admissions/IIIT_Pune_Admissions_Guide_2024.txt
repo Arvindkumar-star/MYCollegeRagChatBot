@@ -1,0 +1,132 @@
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY PUNE (IIIT Pune)
+B.Tech Admissions — Complete Guide
+Source: Official website, JoSAA portal, careers360, shiksha.com
+Last Updated: 2024
+
+=======================================================================
+ABOUT IIIT PUNE
+=======================================================================
+
+Indian Institute of Information Technology Pune (IIIT Pune) is an Institute of National Importance established in 2016 under the Public Private Partnership (PPP) model of the Ministry of Education (MoE), Government of India. IIIT Pune is one of the fastest-growing IIITs in India, committed to imparting high-quality technical education and research.
+
+Location: Nanoli village, Talegaon Dabhade, Pune district, Maharashtra.
+Campus is approximately 35-40 km from Pune city center, near the Mumbai-Pune Expressway. Talegaon Railway Station is approximately 5 km from the campus.
+
+Motto: Vidya Vindate Siddhim (विद्या विन्दते सिद्धिम्) — "Through Knowledge comes Achievement"
+
+Website: https://www.iiitp.ac.in
+Contact Email: info@iiitp.ac.in
+
+=======================================================================
+PROGRAMS OFFERED
+=======================================================================
+
+Undergraduate:
+- B.Tech in Computer Science and Engineering (CSE) — 4 years
+- B.Tech in Electronics and Communication Engineering (ECE) — 4 years
+
+Postgraduate:
+- M.Tech in CSE (Specialization: Artificial Intelligence) — 2 years
+- M.Tech in ECE (Specialization: Microelectronics & VLSI Design) — 2 years
+
+Doctoral:
+- Ph.D. in CSE
+- Ph.D. in ECE
+
+=======================================================================
+B.TECH ADMISSION PROCESS
+=======================================================================
+
+Entrance Examination:
+- Admissions are based on a valid JEE Main score.
+- IIIT Pune does NOT accept MHT-CET scores for B.Tech admission.
+- Only JEE Main + JoSAA counseling is the valid route.
+
+Counseling Authority:
+- Joint Seat Allocation Authority (JoSAA)
+- Website: https://josaa.nic.in
+
+Steps for Admission:
+1. Appear in JEE Main (conducted by NTA).
+2. Register on the JoSAA portal.
+3. Fill choices (institute + branch preferences).
+4. Participate in seat allotment rounds.
+5. Accept allotted seat and pay seat acceptance fee.
+6. Report to IIIT Pune for document verification and enrollment.
+
+Eligibility Requirements:
+- Must have passed Class 12 (or equivalent) with Physics, Chemistry, and Mathematics.
+- Minimum aggregate: 75% in Class 12 (65% for SC/ST/PwD candidates).
+- Must have a valid JEE Main score from the qualifying year.
+
+=======================================================================
+JoSAA 2024 CUTOFF RANKS (General Category — All India)
+=======================================================================
+
+| Branch | Round 1 Closing Rank | Final Round Closing Rank |
+|--------|---------------------|--------------------------|
+| CSE    | 16,245              | 24,690                   |
+| ECE    | 21,401              | 33,241                   |
+
+Note: CSE is consistently the most competitive branch. Cutoffs vary each year based on total applicants, seat matrix, and JEE Main difficulty.
+
+Category-wise Cutoffs (Approximate):
+- General: CSE ~24,690 | ECE ~33,241
+- EWS: CSE ~26,000 | ECE ~36,000
+- OBC-NCL: CSE ~60,000 | ECE ~80,000
+- SC: CSE ~1,00,000 | ECE ~1,20,000
+- ST: CSE ~1,40,000 | ECE ~1,60,000
+
+(Note: These are approximate figures. Always verify at josaa.nic.in for official cutoffs.)
+
+=======================================================================
+TOTAL SEATS (B.Tech 2024)
+=======================================================================
+
+| Category     | CSE Seats | ECE Seats |
+|-------------|-----------|-----------|
+| Open (Gen)  | ~30       | ~23       |
+| EWS         | ~9        | ~7        |
+| OBC-NCL     | ~22       | ~17       |
+| SC          | ~14       | ~11       |
+| ST          | ~7        | ~5        |
+| PwD (Horiz) | ~3        | ~2        |
+| TOTAL       | ~120      | ~90       |
+
+Exact seat matrix is released annually on the JoSAA portal.
+
+=======================================================================
+INTERNATIONAL / NRI ADMISSIONS
+=======================================================================
+
+IIIT Pune accepts international students, NRIs, and PIOs through the DASA (Direct Admission of Students Abroad) scheme.
+- Website: https://dasanit.org
+- Requirements: Class 12 with PCM, SAT/equivalent score as applicable.
+- Fee structure for DASA candidates differs from domestic students.
+
+=======================================================================
+DOCUMENTS REQUIRED AT ADMISSION
+=======================================================================
+
+1. JoSAA allotment letter
+2. Class 10 mark sheet and certificate
+3. Class 12 mark sheet and certificate
+4. JEE Main scorecard
+5. Category certificate (SC/ST/OBC/EWS/PwD if applicable)
+6. 6 passport-size photographs
+7. ID proof (Aadhaar card / Passport)
+8. Medical fitness certificate
+9. Anti-ragging affidavit (student + parent)
+10. Bank account details for fee refund (if applicable)
+
+=======================================================================
+IMPORTANT CONTACTS
+=======================================================================
+
+Admissions Office: admissions@iiitp.ac.in
+Phone: Check official website for current number
+JoSAA Helpline: 011-40759000
+DASA Office: dasanit@nitdgp.ac.in
+
+Official Admission Portal: https://www.iiitp.ac.in/index.php/admission
+JoSAA Portal: https://josaa.nic.in

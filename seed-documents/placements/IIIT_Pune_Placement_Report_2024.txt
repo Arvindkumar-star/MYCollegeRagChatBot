@@ -1,0 +1,153 @@
+INDIAN INSTITUTE OF INFORMATION TECHNOLOGY PUNE (IIIT Pune)
+Placement Report — 2024
+Source: careers360, shiksha.com, campusutra, official placement cell data
+Last Updated: 2024
+
+=======================================================================
+PLACEMENT STATISTICS SUMMARY — 2024
+=======================================================================
+
+B.Tech CSE Placements 2024:
+- Highest Package: ₹43 LPA (Lakhs Per Annum)
+- Average Package: ₹13.25 LPA
+- Median Package: ~₹10–11 LPA
+
+B.Tech ECE Placements 2024:
+- Highest Package: ₹35 LPA
+- Average Package: ₹11.84 LPA
+
+M.Tech Placements 2024:
+- Highest Package: ₹20 LPA
+- Average Package: ₹15 LPA
+- Companies Visiting (M.Tech): 9+
+
+Overall Placement Rate:
+- B.Tech: ~85–90% of eligible students placed
+- M.Tech: ~80–85% placement
+
+Historical Best (2025-26 Batch Target):
+- Highest Package Achieved: ₹45 LPA
+
+=======================================================================
+TOP RECRUITING COMPANIES
+=======================================================================
+
+Tier 1 Companies (Highest packages ₹20+ LPA):
+- Amazon
+- Google
+- Nvidia
+- Goldman Sachs
+- Microsoft
+- Walmart (Walmart Labs)
+
+Tier 2 Companies (₹10–20 LPA):
+- IBM
+- Deloitte
+- Accenture
+- Adobe
+- Cisco
+- Qualcomm
+- Persistent Systems
+- Infosys (InfyTQ / Digital)
+- Wipro (Elite / Turbo)
+- TCS (Digital / Ninja)
+- Capgemini
+- Hexaware
+- Barclays Technology
+- KPIT Technologies
+- Cummins India
+- Cyient
+- L&T Technology Services (LTTS)
+
+Internship Partners (also PPO providers):
+- Amazon
+- Microsoft
+- DE Shaw
+- Goldman Sachs
+- Sprinklr
+- Mphasis
+- Persistent Systems
+
+=======================================================================
+SECTORS OF RECRUITMENT
+=======================================================================
+
+Software / IT:
+- Software Development Engineers (SDE)
+- Full Stack Development
+- Backend Engineering
+- Cloud and DevOps
+
+Data Science / AI / ML:
+- Data Analyst
+- Machine Learning Engineer
+- AI Research
+
+VLSI / Hardware (ECE):
+- VLSI Design Engineer
+- Embedded Systems Engineer
+- Semiconductor Design
+- Signal Processing
+
+Finance / FinTech:
+- Quantitative Analyst
+- Software Engineer (FinTech)
+- Risk Analyst (Goldman Sachs, Barclays)
+
+Consulting:
+- Technology Consultant (Deloitte, Accenture)
+
+=======================================================================
+PLACEMENT PROCESS AT IIIT PUNE
+=======================================================================
+
+Timeline:
+- Phase 1: August–December (Pre-placement talks + Internship season)
+- Phase 2: November–March (Final placement drives)
+
+Process for Students:
+1. Register on the Training & Placement (T&P) portal
+2. Submit resume through the T&P cell
+3. Attend pre-placement talks (PPTs) by companies
+4. Appear in online aptitude tests / coding assessments
+5. Technical interviews (2–3 rounds typically)
+6. HR interview
+7. Offer letter issuance
+
+Eligibility for Placement:
+- Minimum CGPA requirement varies by company (typically 6.0–7.5 CGPA)
+- No active backlogs (company-specific)
+- Must be in final year (B.Tech 4th year)
+
+=======================================================================
+INTERNSHIPS
+=======================================================================
+
+- Duration: Typically 2 months (May–June, after 3rd year B.Tech)
+- Many companies offer Pre-Placement Offers (PPO) post internship
+- Students can also pursue internships independently (startups, research labs)
+- Internship stipends range from ₹15,000–₹80,000 per month
+
+=======================================================================
+HIGHER EDUCATION / FURTHER STUDIES
+=======================================================================
+
+Students also pursue:
+- M.Tech / M.S. at IITs and NITs via GATE
+- MBA at IIMs
+- MS/Ph.D. abroad (USA, Europe, Canada) at top universities
+- UPSC / Government Services
+
+Typically 10–15% of graduating batch opts for higher studies over placement.
+
+=======================================================================
+TRAINING & PLACEMENT CELL
+=======================================================================
+
+T&P Office: IIIT Pune, Nanoli, Talegaon Dabhade, Pune
+Email: placements@iiitp.ac.in
+LinkedIn: Search "IIIT Pune Placement Cell"
+
+For companies wishing to recruit:
+- Contact the placement office for scheduling recruitment drives
+- IIIT Pune welcomes new companies from all sectors
