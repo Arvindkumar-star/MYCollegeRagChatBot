@@ -988,6 +988,9 @@ select.input-dark option {
     0 0 40px rgba(201,168,76,0.06);
   position: relative;
 }
+img {
+  object-fit: contain;
+}
 .login-glow-card::before {
   content: '';
   position: absolute;
