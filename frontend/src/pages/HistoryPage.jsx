@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import DeleteConfirmModal from '../components/DeleteConfirmModal';
+import ProfileMenu from '../components/ProfileMenu';
 
 function timeLabel(date) {
   const d = new Date(date);
@@ -167,9 +168,7 @@ export default function HistoryPage() {
               <History size={14} /> History
             </button>
           </nav>
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-brand to-blue-bright flex items-center justify-center text-white text-xs font-bold ring-1 ring-white/10">
-            {user?.name?.[0]?.toUpperCase() || 'U'}
-          </div>
+          <ProfileMenu compact />
         </div>
       </header>
 

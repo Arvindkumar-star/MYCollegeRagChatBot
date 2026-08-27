@@ -10,6 +10,7 @@ import {
   , Sun, Moon
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import ProfileMenu from '../components/ProfileMenu';
 import { useNavigate } from 'react-router-dom';
 
 /* ─── Upload Modal ───────────────────────────────────────────────────────── */
@@ -336,9 +337,7 @@ export default function AdminPage() {
           <div className="w-9 h-9 rounded-full bg-gradient-to-br from-gold/40 to-gold/20 flex items-center justify-center text-gold text-xs font-bold ring-2 ring-gold/30 shadow-lg shadow-gold/20">
             S
           </div>
-          <button onClick={logout} className="text-white/25 hover:text-red-400 transition" title="Log out">
-            <LogOut size={15} />
-          </button>
+          <ProfileMenu compact />
         </div>
       </header>
 

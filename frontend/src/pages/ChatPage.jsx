@@ -8,6 +8,7 @@ import ChatInput from '../components/ChatInput';
 import toast from 'react-hot-toast';
 import { Menu, MessageSquare, History, Sun, Moon, Settings } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import ProfileMenu from '../components/ProfileMenu';
 
 const SUGGESTED = [
   'What are the B.Tech admission requirements?',
@@ -156,9 +157,7 @@ export default function ChatPage() {
                 <History size={13} /> History
               </button>
             </nav>
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-brand to-blue-bright flex items-center justify-center text-white text-xs font-bold ring-1 ring-white/10">
-              {user?.name?.[0]?.toUpperCase() || 'U'}
-            </div>
+            <ProfileMenu />
           </div>
         </header>
 
