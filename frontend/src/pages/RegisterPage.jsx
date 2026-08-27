@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { authAPI } from '../api';
 import toast from 'react-hot-toast';
-import { GraduationCap, ShieldCheck, Eye, EyeOff, UserPlus } from 'lucide-react';
+import { GraduationCap, Eye, EyeOff, UserPlus } from 'lucide-react';
 
 const ROLES = [
   {
@@ -13,20 +13,12 @@ const ROLES = [
     desc: 'Access the chatbot to get answers about admissions, fees, hostel, placements & more.',
     color: 'from-blue-brand/20 to-blue-bright/10',
   },
-  {
-    key: 'admin',
-    icon: ShieldCheck,
-    title: 'Administrator',
-    desc: 'Upload and manage IIIT Pune documents, monitor usage, and configure the knowledge base.',
-    color: 'from-gold/20 to-gold-light/10',
-  },
 ];
 
 export default function RegisterPage() {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [role, setRole] = useState('student');
-  const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '', adminCode: '' });
+  const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' });
   const [showPass, setShowPass] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -41,8 +33,7 @@ export default function RegisterPage() {
         name: form.name,
         email: form.email,
         password: form.password,
-        role,
-        ...(role === 'admin' && { adminCode: form.adminCode }),
+        role: 'student',
       });
       const user = await login(form.email, form.password);
       toast.success(`Welcome to IIIT Pune, ${user.name}!`);
@@ -84,7 +75,7 @@ export default function RegisterPage() {
           {/* ─── Role selection ─── */}
           <div className="mb-7">
             <p className="text-xs font-semibold text-white/40 uppercase tracking-widest mb-3">I am registering as</p>
-            <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-3">
               {ROLES.map(({ key, icon: Icon, title, desc, color }) => (
                 <button
                   key={key}
@@ -146,19 +137,6 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            {/* Admin code field — only for admin role */}
-            {role === 'admin' && (
-              <div className="animate-fade-up">
-                <label className="block text-xs font-semibold text-gold/60 uppercase tracking-widest mb-2">
-                  Admin Registration Code <span className="text-gold">*</span>
-                </label>
-                <input className="input-dark border-gold/20" type="password"
-                  placeholder="Enter the admin registration code"
-                  required value={form.adminCode} onChange={update('adminCode')} id="reg-admin-code" />
-                <p className="text-white/25 text-xs mt-1.5">Contact the IIIT Pune IT team for the admin code.</p>
-              </div>
-            )}
-
             <button id="register-submit-btn" type="submit" disabled={loading}
               className="btn-gold w-full py-3 flex items-center justify-center gap-2 mt-2">
               {loading ? (
@@ -169,7 +147,7 @@ export default function RegisterPage() {
               ) : (
                 <>
                   <UserPlus size={16} />
-                  Create {role === 'admin' ? 'Admin' : 'Student'} Account
+                  Create Student Account
                 </>
               )}
             </button>

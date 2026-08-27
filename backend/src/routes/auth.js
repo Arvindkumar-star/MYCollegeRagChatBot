@@ -6,20 +6,18 @@ const { authenticate } = require('../middleware/auth');
 
 // POST /auth/register
 router.post('/register', async (req, res) => {
-  const { name, email, password, role, adminCode } = req.body;
+  const { name, email, password } = req.body;
   if (!name || !email || !password)
     return res.status(400).json({ error: 'name, email, and password are required' });
   if (password.length < 6)
     return res.status(400).json({ error: 'Password must be at least 6 characters' });
 
-  // Validate admin registration code
-  const requestedRole = role === 'admin' ? 'admin' : 'student';
-  if (requestedRole === 'admin') {
-    const validCode = process.env.ADMIN_REGISTRATION_CODE || 'IIITPUNE_ADMIN_2024';
-    if (!adminCode || adminCode !== validCode) {
-      return res.status(403).json({ error: 'Invalid admin registration code' });
-    }
+  // Admin accounts must be provisioned by the seed script or an existing
+  // trusted administrator. Never allow public self-registration as admin.
+  if (req.body.role === 'admin' || req.body.adminCode) {
+    return res.status(403).json({ error: 'Admin accounts can only be created by an authorized administrator.' });
   }
+  const requestedRole = 'student';
 
   const existing = await User.findOne({ email: email.toLowerCase() });
   if (existing) return res.status(400).json({ error: 'Email already registered' });

@@ -341,6 +341,11 @@ export default function AdminPage() {
           ))}
         </div>
 
+        <div className="mb-6 flex items-start gap-3 rounded-xl border border-gold/20 bg-gold/5 px-4 py-3 text-sm text-white/65">
+          <Shield size={16} className="mt-0.5 shrink-0 text-gold" />
+          <p><span className="font-semibold text-gold">Authorized administrators only.</span> This dashboard can upload, replace, and delete knowledge-base content. Do not share this account or leave it signed in on a shared device.</p>
+        </div>
+
         {/* ═══════════ DOCUMENTS TAB ═══════════ */}
         {tab === 'documents' && (
           <div className="animate-fade-up">
