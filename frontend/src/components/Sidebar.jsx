@@ -1,4 +1,4 @@
-import { Plus, MessageSquare, LogOut, Settings, Download, History } from 'lucide-react';
+import { Plus, MessageSquare, LogOut, Settings, Download, History, Trash2 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { chatAPI } from '../api';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -14,7 +14,7 @@ function timeAgo(date) {
   return new Date(date).toLocaleDateString();
 }
 
-export default function Sidebar({ conversations, activeId, onSelect, onNewChat, loading, isOpen, onClose }) {
+export default function Sidebar({ conversations, activeId, onSelect, onNewChat, onDelete, loading, isOpen, onClose }) {
   const { user, logout, isAdmin } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -119,6 +119,14 @@ export default function Sidebar({ conversations, activeId, onSelect, onNewChat, 
               className="opacity-0 group-hover:opacity-100 text-white/25 hover:text-gold/70 transition ml-1 shrink-0"
               title="Export">
               <Download size={11} />
+            </button>
+            <button onClick={(e) => {
+                e.stopPropagation();
+                if (window.confirm('Delete this conversation permanently?')) onDelete?.(conv._id);
+              }}
+              className="opacity-0 group-hover:opacity-100 text-white/25 hover:text-red-400 transition ml-1 shrink-0"
+              title="Delete conversation" aria-label={`Delete ${conv.title}`}>
+              <Trash2 size={11} />
             </button>
           </div>
         ))}

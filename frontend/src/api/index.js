@@ -39,6 +39,7 @@ export const chatAPI = {
   send: (data) => api.post('/chat', data),
   getConversations: () => api.get('/conversations'),
   getConversation: (id) => api.get(`/conversations/${id}`),
+  deleteConversation: (id) => api.delete(`/conversations/${id}`),
   exportConversation: (id) => api.post(`/conversations/${id}/export`, {}, { responseType: 'blob' }),
   submitFeedback: (messageId, data) => api.post(`/messages/${messageId}/feedback`, data),
   getSuggestedQuestions: () => api.get('/suggested-questions'),

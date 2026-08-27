@@ -53,6 +53,22 @@ router.get('/conversations/:id', authenticate, async (req, res) => {
   res.json({ conversation: conv, messages });
 });
 
+// DELETE /conversations/:id — permanently delete the user's conversation
+router.delete('/conversations/:id', authenticate, async (req, res) => {
+  const conv = await Conversation.findOne({ _id: req.params.id, userId: req.user._id });
+  if (!conv) return res.status(404).json({ error: 'Conversation not found' });
+
+  const messages = await Message.find({ conversationId: conv._id }).select('_id').lean();
+  const messageIds = messages.map((message) => message._id);
+  await Promise.all([
+    Feedback.deleteMany({ messageId: { $in: messageIds }, userId: req.user._id }),
+    Message.deleteMany({ conversationId: conv._id }),
+    Conversation.deleteOne({ _id: conv._id }),
+  ]);
+
+  res.json({ success: true, message: 'Conversation deleted' });
+});
+
 // POST /conversations/:id/export — export conversation as .txt [bonus]
 router.post('/conversations/:id/export', authenticate, async (req, res) => {
   const conv = await Conversation.findOne({ _id: req.params.id, userId: req.user._id });

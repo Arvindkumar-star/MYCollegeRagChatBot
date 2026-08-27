@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 import {
   History, Search, MessageSquare, ArrowRight,
-  Calendar, ChevronLeft, Clock, Inbox, Sun, Moon
+  Calendar, ChevronLeft, Clock, Inbox, Sun, Moon, Trash2
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
@@ -29,7 +29,7 @@ function fullDateTime(date) {
   });
 }
 
-function ConvCard({ conv, index }) {
+function ConvCard({ conv, index, onDelete }) {
   const navigate = useNavigate();
   const initials = conv.title?.slice(0, 2)?.toUpperCase() || 'CH';
 
@@ -63,13 +63,22 @@ function ConvCard({ conv, index }) {
       </div>
 
       {/* Action */}
-      <button
-        id={`resume-chat-${conv._id}`}
-        onClick={() => navigate('/chat', { state: { conversationId: conv._id } })}
-        className="history-resume-btn shrink-0"
-      >
-        Resume Chat <ArrowRight size={13} />
-      </button>
+      <div className="flex items-center gap-2 shrink-0">
+        <button
+          id={`resume-chat-${conv._id}`}
+          onClick={() => navigate('/chat', { state: { conversationId: conv._id } })}
+          className="history-resume-btn"
+        >
+          Resume Chat <ArrowRight size={13} />
+        </button>
+        <button
+          id={`delete-history-${conv._id}`}
+          onClick={() => { if (window.confirm('Delete this conversation permanently?')) onDelete(conv._id); }}
+          className="text-white/25 hover:text-red-400 transition p-2 rounded-lg hover:bg-red-400/10"
+          title="Delete conversation" aria-label={`Delete ${conv.title}`}>
+          <Trash2 size={14} />
+        </button>
+      </div>
     </div>
   );
 }
@@ -92,6 +101,16 @@ export default function HistoryPage() {
   const filtered = conversations.filter(c =>
     c.title?.toLowerCase().includes(query.toLowerCase())
   );
+
+  const handleDelete = async (id) => {
+    try {
+      await chatAPI.deleteConversation(id);
+      setConversations((current) => current.filter((conversation) => conversation._id !== id));
+      toast.success('Conversation deleted');
+    } catch (err) {
+      toast.error(err.response?.data?.error || 'Failed to delete conversation');
+    }
+  };
 
   // Group by relative date
   const groups = filtered.reduce((acc, conv) => {
@@ -217,7 +236,7 @@ export default function HistoryPage() {
               <span className="text-[10px] text-white/20">{convs.length}</span>
             </div>
             <div className="space-y-2.5">
-              {convs.map((conv, i) => <ConvCard key={conv._id} conv={conv} index={i} />)}
+              {convs.map((conv, i) => <ConvCard key={conv._id} conv={conv} index={i} onDelete={handleDelete} />)}
             </div>
           </div>
         ))}

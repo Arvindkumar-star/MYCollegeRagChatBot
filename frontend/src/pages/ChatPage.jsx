@@ -74,6 +74,17 @@ export default function ChatPage() {
 
   const handleNewChat = () => { setActiveConvId(null); setMessages([]); setSidebarOpen(false); };
 
+  const handleDeleteConversation = async (id) => {
+    try {
+      await chatAPI.deleteConversation(id);
+      setConversations((current) => current.filter((conversation) => conversation._id !== id));
+      if (activeConvId === id) handleNewChat();
+      toast.success('Conversation deleted');
+    } catch (err) {
+      toast.error(err.response?.data?.error || 'Failed to delete conversation');
+    }
+  };
+
   const handleSend = async (text) => {
     setSending(true);
     setMessages(p => [...p, { role: 'user', content: text, _id: Date.now().toString() }]);
@@ -117,7 +128,7 @@ export default function ChatPage() {
         <div className="orb" style={{ width: 250, height: 250, bottom: 50, right: 300, animationDelay: '5s', background: 'radial-gradient(circle, rgba(201,168,76,0.08), transparent 70%)' }} />
       </div>
 
-      <Sidebar conversations={conversations} activeId={activeConvId} onSelect={loadConversation} onNewChat={handleNewChat} loading={convsLoading} isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar conversations={conversations} activeId={activeConvId} onSelect={loadConversation} onNewChat={handleNewChat} onDelete={handleDeleteConversation} loading={convsLoading} isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       <main className="flex-1 flex flex-col min-w-0 relative z-10">
         {/* Header */}
