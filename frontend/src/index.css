@@ -328,22 +328,23 @@ select.input-dark option {
   .auth-card h2 { font-size: 1.35rem; }
   .auth-card .grid-cols-2 { grid-template-columns: 1fr; }
   .demo-creds-card { padding: 0.75rem; }
-  .profile-menu-backdrop { display: block; position: fixed; inset: 0; z-index: 55; background: rgba(3,8,25,0.88); }
+  .profile-menu-backdrop { display: block; position: fixed; inset: 0; z-index: 55; background: rgba(3,8,25,0.97); }
+  .theme-light .profile-menu-backdrop { background: rgba(20,35,65,0.97); }
   .profile-menu {
     position: fixed;
-    top: auto;
+    top: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    max-height: min(24rem, 78vh);
-    border-radius: 1.4rem 1.4rem 0 0;
+    width: min(20rem, 88vw);
+    max-height: none;
+    border-radius: 1.4rem 0 0 1.4rem;
     background: #17244b;
-    box-shadow: 0 -18px 55px rgba(0,0,0,0.5);
-    animation: sheetUp 0.24s ease forwards;
+    box-shadow: -18px 0 55px rgba(0,0,0,0.5);
+    animation: drawerIn 0.24s ease forwards;
   }
 }
 
-@keyframes sheetUp { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }
+@keyframes drawerIn { from { opacity: 0; transform: translateX(1rem); } to { opacity: 1; transform: translateX(0); } }
 
 /* ─── Role selection cards ───────────────────────────────────────────────────── */
 .role-card {
