@@ -8,6 +8,7 @@ import {
   Calendar, ChevronLeft, Clock, Inbox, Sun, Moon, Trash2
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import DeleteConfirmModal from '../components/DeleteConfirmModal';
 
 function timeLabel(date) {
   const d = new Date(date);
@@ -73,7 +74,7 @@ function ConvCard({ conv, index, onDelete }) {
         </button>
         <button
           id={`delete-history-${conv._id}`}
-          onClick={() => { if (window.confirm('Delete this conversation permanently?')) onDelete(conv._id); }}
+          onClick={() => onDelete(conv)}
           className="text-white/25 hover:text-red-400 transition p-2 rounded-lg hover:bg-red-400/10"
           title="Delete conversation" aria-label={`Delete ${conv.title}`}>
           <Trash2 size={14} />
@@ -90,6 +91,7 @@ export default function HistoryPage() {
   const [conversations, setConversations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('');
+  const [deleteTarget, setDeleteTarget] = useState(null);
 
   useEffect(() => {
     chatAPI.getConversations()
@@ -102,10 +104,11 @@ export default function HistoryPage() {
     c.title?.toLowerCase().includes(query.toLowerCase())
   );
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (conversation) => {
     try {
-      await chatAPI.deleteConversation(id);
-      setConversations((current) => current.filter((conversation) => conversation._id !== id));
+      await chatAPI.deleteConversation(conversation._id);
+      setConversations((current) => current.filter((item) => item._id !== conversation._id));
+      setDeleteTarget(null);
       toast.success('Conversation deleted');
     } catch (err) {
       toast.error(err.response?.data?.error || 'Failed to delete conversation');
@@ -236,11 +239,12 @@ export default function HistoryPage() {
               <span className="text-[10px] text-white/20">{convs.length}</span>
             </div>
             <div className="space-y-2.5">
-              {convs.map((conv, i) => <ConvCard key={conv._id} conv={conv} index={i} onDelete={handleDelete} />)}
+              {convs.map((conv, i) => <ConvCard key={conv._id} conv={conv} index={i} onDelete={setDeleteTarget} />)}
             </div>
           </div>
         ))}
       </main>
+      {deleteTarget && <DeleteConfirmModal title={`Delete “${deleteTarget.title}”?`} onCancel={() => setDeleteTarget(null)} onConfirm={() => handleDelete(deleteTarget)} />}
     </div>
   );
 }

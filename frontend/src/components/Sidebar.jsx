@@ -3,6 +3,8 @@ import { useAuth } from '../context/AuthContext';
 import { chatAPI } from '../api';
 import { useNavigate, useLocation } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import DeleteConfirmModal from './DeleteConfirmModal';
+import { useState } from 'react';
 
 function timeAgo(date) {
   const diff = Date.now() - new Date(date).getTime();
@@ -18,6 +20,7 @@ export default function Sidebar({ conversations, activeId, onSelect, onNewChat, 
   const { user, logout, isAdmin } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const [deleteTarget, setDeleteTarget] = useState(null);
 
   const handleExport = async (convId, e) => {
     e.stopPropagation();
@@ -122,7 +125,7 @@ export default function Sidebar({ conversations, activeId, onSelect, onNewChat, 
             </button>
             <button onClick={(e) => {
                 e.stopPropagation();
-                if (window.confirm('Delete this conversation permanently?')) onDelete?.(conv._id);
+                setDeleteTarget(conv);
               }}
               className="opacity-0 group-hover:opacity-100 text-white/25 hover:text-red-400 transition ml-1 shrink-0"
               title="Delete conversation" aria-label={`Delete ${conv.title}`}>
@@ -157,6 +160,7 @@ export default function Sidebar({ conversations, activeId, onSelect, onNewChat, 
         </div>
       </div>
     </aside>
+    {deleteTarget && <DeleteConfirmModal title={`Delete “${deleteTarget.title}”?`} onCancel={() => setDeleteTarget(null)} onConfirm={() => { onDelete?.(deleteTarget._id); setDeleteTarget(null); }} />}
     </>
   );
 }
