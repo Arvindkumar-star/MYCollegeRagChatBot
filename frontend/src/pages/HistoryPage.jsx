@@ -193,7 +193,7 @@ export default function HistoryPage() {
               placeholder="Search conversations…"
               value={query}
               onChange={e => setQuery(e.target.value)}
-              className="input-dark pl-9 pr-4 py-2.5 text-sm w-full"
+              className="history-search-input input-dark pr-4 py-2.5 text-sm w-full"
             />
           </div>
         </div>
