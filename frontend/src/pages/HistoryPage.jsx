@@ -135,7 +135,7 @@ export default function HistoryPage() {
       </div>
 
       {/* Header */}
-      <header className="portal-header px-6 py-3.5 flex items-center justify-between relative z-10">
+      <header className="portal-header px-3 sm:px-6 py-3.5 flex items-center justify-between relative z-10">
         <div className="flex items-center gap-3">
           <button
             onClick={() => navigate('/chat')}

@@ -326,7 +326,12 @@ select.input-dark option {
   .auth-card h2 { font-size: 1.35rem; }
   .auth-card .grid-cols-2 { grid-template-columns: 1fr; }
   .demo-creds-card { padding: 0.75rem; }
-  .profile-menu { right: -0.25rem; width: min(15rem, calc(100vw - 2rem)); }
+  .profile-menu {
+    position: fixed;
+    top: 4.25rem;
+    right: 0.75rem;
+    width: min(15rem, calc(100vw - 1.5rem));
+  }
 }
 
 /* ─── Role selection cards ───────────────────────────────────────────────────── */
@@ -493,6 +498,7 @@ select.input-dark option {
 }
 
 @media (max-width: 640px) {
+  .chat-message-scroll { padding-bottom: 5.5rem !important; }
   .chat-input-bar { padding-bottom: 4.5rem !important; }
 }
 

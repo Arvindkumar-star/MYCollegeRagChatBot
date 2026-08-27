@@ -133,7 +133,7 @@ export default function ChatPage() {
 
       <main className="flex-1 flex flex-col min-w-0 relative z-10">
         {/* Header */}
-        <header className="portal-header px-6 py-3 flex items-center justify-between shrink-0">
+        <header className="portal-header px-3 sm:px-6 py-3 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => navigate('/')} title="Home">
             <button className="sm:hidden text-white/60 hover:text-white mr-1" onClick={(e) => { e.stopPropagation(); setSidebarOpen(true); }} aria-label="Open navigation menu">
               <Menu size={20} />
@@ -162,7 +162,7 @@ export default function ChatPage() {
         </header>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto px-3 sm:px-4 md:px-10 py-5 sm:py-8">
+        <div className="chat-message-scroll flex-1 overflow-y-auto px-3 sm:px-4 md:px-10 py-5 sm:py-8">
           {/* Empty state */}
           {isEmpty && (
             <div id="empty-state" className="flex flex-col items-center justify-center h-full text-center animate-fade-up">

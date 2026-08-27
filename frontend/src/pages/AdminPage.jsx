@@ -309,7 +309,7 @@ export default function AdminPage() {
       </div>
 
       {/* Header */}
-      <header className="portal-header px-6 py-3.5 flex items-center justify-between relative z-10">
+      <header className="portal-header px-3 sm:px-6 py-3.5 flex items-center justify-between relative z-10">
         <div className="flex items-center gap-3">
           <button onClick={toggleTheme} className="theme-toggle" aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`} title="Toggle theme">
             {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
