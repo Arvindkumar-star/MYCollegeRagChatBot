@@ -1,4 +1,4 @@
-import { Plus, MessageSquare, LogOut, Settings, Download, BookOpen, History } from 'lucide-react';
+import { Plus, MessageSquare, LogOut, Settings, Download, History } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { chatAPI } from '../api';
 import { useNavigate, useLocation } from 'react-router-dom';

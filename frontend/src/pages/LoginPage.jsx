@@ -43,10 +43,10 @@ export default function LoginPage() {
       const user = await login(DEMO_STUDENT.email, DEMO_STUDENT.password);
       toast.success(`Welcome, ${user.name}!`);
       navigate('/chat');
-    } catch (loginErr) {
+    } catch {
       // Account doesn't exist → auto-register then login
       try {
-        const user = await register(DEMO_STUDENT.name, DEMO_STUDENT.email, DEMO_STUDENT.password);
+        await register(DEMO_STUDENT.name, DEMO_STUDENT.email, DEMO_STUDENT.password);
         toast.success('Demo student account created & logged in!');
         navigate('/chat');
       } catch (regErr) {
@@ -64,7 +64,7 @@ export default function LoginPage() {
       const user = await login(DEMO_ADMIN.email, DEMO_ADMIN.password);
       toast.success(`Welcome back, ${user.name}!`);
       navigate('/admin');
-    } catch (err) {
+    } catch {
       // Fall back to filling the form
       fillDemo(DEMO_ADMIN);
       toast.error('Admin account not found — credentials filled. Ask your admin to seed the DB.');
@@ -74,7 +74,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0b1437 0%, #0d1a45 100%)' }}>
+    <div className="auth-page min-h-screen flex relative overflow-hidden px-3 sm:px-6" style={{ background: 'linear-gradient(135deg, #0b1437 0%, #0d1a45 100%)' }}>
       {/* Animated background orbs */}
       <div className="orb orb-1" />
       <div className="orb orb-2" />
@@ -119,10 +119,10 @@ export default function LoginPage() {
       </div>
 
       {/* ─── Right — login form ───────────────────────────────────────── */}
-      <div className="flex-1 flex items-center justify-center p-8 relative z-10">
+      <div className="flex-1 flex items-center justify-center p-2 sm:p-8 relative z-10">
         <div className="w-full max-w-md animate-scale-in">
           {/* Mobile logo */}
-          <div className="flex items-center gap-3 mb-8 lg:hidden cursor-pointer" onClick={() => navigate('/')}>
+          <div className="auth-logo flex items-center gap-3 mb-8 lg:hidden cursor-pointer" onClick={() => navigate('/')}>
             <img src="/iitp-logo.png" alt="IIIT Pune" className="w-12 h-12 rounded-full ring-2 ring-gold/40" />
             <div>
               <p className="text-gold font-bold">IIIT Pune</p>
@@ -131,7 +131,7 @@ export default function LoginPage() {
           </div>
 
           {/* Card with glowing border */}
-          <div className="login-glow-card p-8">
+          <div className="auth-card login-glow-card p-4 sm:p-8">
             <div className="mb-7">
               <h2 className="text-2xl font-bold text-white mb-1">Sign In</h2>
               <p className="text-white/40 text-sm">Access the IIIT Pune knowledge base</p>

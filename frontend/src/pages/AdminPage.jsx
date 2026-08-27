@@ -7,7 +7,9 @@ import {
   CheckCircle, Clock, XCircle, LogOut, MessageSquare, ThumbsUp,
   ArrowLeft, FileText, Database, Users, TrendingUp, Settings,
   Shield, Cpu, Layers, Key, Activity, GraduationCap, User
+  , Sun, Moon
 } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 import { useNavigate } from 'react-router-dom';
 
 /* ─── Upload Modal ───────────────────────────────────────────────────────── */
@@ -209,6 +211,7 @@ function SettingsTab({ user, logout, documents }) {
 /* ─── Main AdminPage ─────────────────────────────────────────────────────── */
 export default function AdminPage() {
   const { user, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
   const [tab, setTab] = useState('documents');
   const [documents, setDocuments] = useState([]);
@@ -301,6 +304,9 @@ export default function AdminPage() {
       {/* Header */}
       <header className="portal-header px-6 py-3.5 flex items-center justify-between relative z-10">
         <div className="flex items-center gap-3">
+          <button onClick={toggleTheme} className="theme-toggle" aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`} title="Toggle theme">
+            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
           <button onClick={() => navigate('/chat')} className="text-white/30 hover:text-white/70 transition mr-1" title="Back to chat">
             <ArrowLeft size={16} />
           </button>

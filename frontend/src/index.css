@@ -219,6 +219,79 @@ select.input-dark option {
   box-shadow: 0 0 0 3px rgba(26,79,186,0.12);
 }
 
+/* ─── Theme toggle ─────────────────────────────────────────────────────────── */
+.theme-toggle {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  color: var(--gold2);
+  background: rgba(255,255,255,0.06);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.theme-toggle:hover { background: rgba(201,168,76,0.15); border-color: var(--gold); transform: rotate(12deg); }
+
+/* ─── Light theme ──────────────────────────────────────────────────────────── */
+.theme-light {
+  --navy: #f4f7fc;
+  --navy2: #ffffff;
+  --navy3: #eaf0fb;
+  --glass: rgba(255,255,255,0.82);
+  --border: rgba(30,55,100,0.14);
+}
+.theme-light body { background: #f4f7fc; color: #1e293b; }
+.theme-light [style*="linear-gradient"] { background: linear-gradient(135deg, #f4f7fc 0%, #eaf0fb 100%) !important; }
+.theme-light .portal-header { background: rgba(255,255,255,0.9); border-bottom-color: rgba(26,79,186,0.14); }
+.theme-light .chat-sidebar { background: linear-gradient(180deg, #ffffff 0%, #eef3fb 100%); border-right-color: rgba(26,79,186,0.12); }
+.theme-light .glass-card,
+.theme-light .login-glow-card,
+.theme-light .demo-creds-card,
+.theme-light .admin-settings-section,
+.theme-light .history-card { background: rgba(255,255,255,0.88); border-color: rgba(30,55,100,0.12); box-shadow: 0 12px 35px rgba(30,55,100,0.09); }
+.theme-light .bubble-ai { background: #ffffff; border-color: #dbe4f2; color: #334155; box-shadow: 0 5px 18px rgba(30,55,100,0.06); }
+.theme-light .bubble-user { color: #ffffff; }
+.theme-light .input-dark { background: #ffffff; border-color: #cbd7ea; color: #1e293b; }
+.theme-light .input-dark::placeholder { color: #94a3b8; }
+.theme-light .input-dark option,
+.theme-light select.input-dark option { background: #ffffff; color: #1e293b; }
+.theme-light .theme-toggle { color: #1a4fba; background: #eef3fb; border-color: #cbd7ea; }
+.theme-light .admin-table th { background: #eef3fb; color: #52627a; border-bottom-color: #dbe4f2; }
+.theme-light .admin-table td { color: #334155; border-bottom-color: #e5ebf4; }
+.theme-light .sidebar-item { color: #52627a; }
+.theme-light .sidebar-item:hover { background: rgba(26,79,186,0.07); color: #1e3a67; }
+.theme-light .sidebar-item.active { background: rgba(201,168,76,0.16); color: #8a6814; }
+.theme-light .source-chip { background: rgba(201,168,76,0.12); }
+.theme-light .suggest-chip { background: #ffffff; border-color: #dbe4f2; color: #52627a; }
+.theme-light .chat-input-bar { background: rgba(255,255,255,0.92); border-top-color: #dbe4f2; }
+.theme-light .role-card { background: #ffffff; border-color: #dbe4f2; }
+.theme-light .role-card.selected { background: #fffaf0; }
+.theme-light .text-white { color: #1e293b !important; }
+.theme-light .text-white\/85 { color: #334155 !important; }
+.theme-light .text-white\/80 { color: #334155 !important; }
+.theme-light .text-white\/70 { color: #475569 !important; }
+.theme-light .text-white\/60 { color: #64748b !important; }
+.theme-light .text-white\/50 { color: #64748b !important; }
+.theme-light .text-white\/40 { color: #64748b !important; }
+.theme-light .text-white\/35,
+.theme-light .text-white\/30,
+.theme-light .text-white\/25,
+.theme-light .text-white\/20 { color: #7b879b !important; }
+
+@media (max-width: 640px) {
+  .auth-page { padding: 1.25rem 0.75rem; align-items: flex-start; }
+  .auth-card { padding: 1.25rem; border-radius: 16px; }
+  .auth-logo { margin: 0.5rem 0 1.25rem; }
+  .auth-logo img { width: 2.75rem; height: 2.75rem; }
+  .auth-logo p { font-size: 0.95rem; }
+  .auth-card h2 { font-size: 1.35rem; }
+  .auth-card .grid-cols-2 { grid-template-columns: 1fr; }
+  .demo-creds-card { padding: 0.75rem; }
+}
+
 /* ─── Role selection cards ───────────────────────────────────────────────────── */
 .role-card {
   border: 2px solid rgba(255,255,255,0.10);

@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { chatAPI } from '../api';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 import {
   History, Search, MessageSquare, ArrowRight,
-  Calendar, ChevronLeft, Clock, Inbox
+  Calendar, ChevronLeft, Clock, Inbox, Sun, Moon
 } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 function timeLabel(date) {
   const d = new Date(date);
@@ -75,6 +76,7 @@ function ConvCard({ conv, index }) {
 
 export default function HistoryPage() {
   const { user } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
   const [conversations, setConversations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -131,6 +133,9 @@ export default function HistoryPage() {
           </div>
         </div>
         <div className="flex items-center gap-4">
+          <button onClick={toggleTheme} className="theme-toggle" aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`} title="Toggle theme">
+            {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
           {/* Nav links */}
           <nav className="hidden sm:flex items-center gap-1">
             <button onClick={() => navigate('/chat')} className="history-nav-btn">

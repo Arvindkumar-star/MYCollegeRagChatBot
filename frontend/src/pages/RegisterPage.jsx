@@ -48,7 +48,7 @@ export default function RegisterPage() {
   const update = (f) => (e) => setForm({ ...form, [f]: e.target.value });
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-10"
+    <div className="auth-page min-h-screen flex items-center justify-center relative overflow-hidden px-3 py-6 sm:px-4 sm:py-10"
       style={{ background: 'linear-gradient(135deg, #0b1437 0%, #0d1a45 100%)' }}>
 
       {/* Animated bg */}
@@ -58,7 +58,7 @@ export default function RegisterPage() {
 
       <div className="w-full max-w-lg relative z-10 animate-scale-in">
         {/* Logo header */}
-        <div className="flex items-center gap-3 mb-8 justify-center">
+        <div className="auth-logo flex items-center gap-3 mb-5 sm:mb-8 justify-center">
           <img src="/iitp-logo.png" alt="IIIT Pune" className="w-14 h-14 rounded-full ring-2 ring-gold/40 shadow-lg shadow-gold/20" />
           <div>
             <p className="text-gold font-bold text-lg leading-none">IIIT Pune</p>
@@ -66,7 +66,7 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        <div className="glass-card p-8">
+        <div className="auth-card glass-card p-4 sm:p-8">
           <div className="mb-7">
             <h2 className="text-2xl font-bold text-white">Create Account</h2>
             <p className="text-white/40 text-sm mt-1">Join the IIIT Pune Knowledge Assistant</p>
@@ -80,21 +80,19 @@ export default function RegisterPage() {
                 <button
                   key={key}
                   type="button"
-                  onClick={() => setRole(key)}
+                  onClick={() => {}}
                   id={`role-${key}`}
-                  className={`role-card text-left ${role === key ? 'selected' : ''}`}
+                  className="role-card text-left selected"
                 >
                   <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mb-3`}>
-                    <Icon size={18} className={role === key ? 'text-gold' : 'text-white/50'} />
+                    <Icon size={18} className="text-gold" />
                   </div>
-                  <p className={`font-semibold text-sm mb-1 ${role === key ? 'text-gold-light' : 'text-white/70'}`}>{title}</p>
+                  <p className="font-semibold text-sm mb-1 text-gold-light">{title}</p>
                   <p className="text-white/35 text-xs leading-snug">{desc}</p>
-                  {role === key && (
-                    <div className="mt-2 flex items-center gap-1">
-                      <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                      <span className="text-gold text-xs font-medium">Selected</span>
-                    </div>
-                  )}
+                  <div className="mt-2 flex items-center gap-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                    <span className="text-gold text-xs font-medium">Selected</span>
+                  </div>
                 </button>
               ))}
             </div>

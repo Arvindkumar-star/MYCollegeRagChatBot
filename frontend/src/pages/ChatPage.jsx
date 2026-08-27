@@ -6,7 +6,8 @@ import Sidebar from '../components/Sidebar';
 import MessageBubble from '../components/MessageBubble';
 import ChatInput from '../components/ChatInput';
 import toast from 'react-hot-toast';
-import { Menu, MessageSquare, History } from 'lucide-react';
+import { Menu, MessageSquare, History, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 const SUGGESTED = [
   'What are the B.Tech admission requirements?',
@@ -34,6 +35,7 @@ function TypingIndicator() {
 
 export default function ChatPage() {
   const { user } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
   const [conversations, setConversations] = useState([]);
@@ -125,6 +127,9 @@ export default function ChatPage() {
             </div>
           </div>
           <div className="flex items-center gap-3">
+            <button onClick={toggleTheme} className="theme-toggle" aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`} title="Toggle theme">
+              {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+            </button>
             {/* Nav tabs */}
             <nav className="hidden sm:flex items-center gap-1">
               <button id="chat-nav-chat" onClick={() => navigate('/chat')} className="chat-header-nav-btn active">
