@@ -135,7 +135,7 @@ function NotFoundNotice({ message, onFeedback }) {
         {/* Header row */}
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400/80">CampusMind Notice</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400/80">CampusSaathi Notice</span>
           </div>
           <button onClick={handleCopy} className="text-white/20 hover:text-white/50 transition" title="Copy">
             <Copy size={11} />
@@ -154,7 +154,7 @@ function NotFoundNotice({ message, onFeedback }) {
         {/* Footer */}
         <div className="mt-3 pt-2 border-t border-white/6 flex items-center justify-between">
           <p className="text-white/25 text-[10px] italic">
-            CampusMind answers exclusively from verified official college documents.
+            CampusSaathi answers exclusively from verified official college documents.
           </p>
           {onFeedback && message._id && <FeedbackButtons messageId={message._id} onFeedback={onFeedback} />}
         </div>
@@ -207,7 +207,7 @@ export default function MessageBubble({ message, onFeedback, onRegenerate }) {
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-5 animate-fade-up`}>
       {!isUser && (
         <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-brand to-blue-bright flex items-center justify-center mr-3 shrink-0 mt-1 shadow-lg shadow-blue-brand/30">
-          <img src="/iitp-logo.png" alt="" className="w-6 h-6 rounded-full" />
+          <img src="/campussaathi-mark.svg" alt="" className="w-6 h-6 rounded-lg" />
         </div>
       )}
 

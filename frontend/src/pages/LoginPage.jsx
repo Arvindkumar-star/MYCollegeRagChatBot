@@ -84,10 +84,10 @@ export default function LoginPage() {
       <div className="hidden lg:flex w-1/2 flex-col justify-between p-14 relative z-10">
         {/* Logo — clickable to home */}
         <div className="flex items-center gap-3 animate-fade-up cursor-pointer group" onClick={() => navigate('/')}>
-          <img src="/iitp-logo.png" alt="IIIT Pune" className="w-14 h-14 rounded-full ring-2 ring-gold/40 shadow-lg shadow-gold/20 group-hover:ring-gold/70 transition-all" />
+          <img src="/campussaathi-mark.svg" alt="CampusSaathi" className="w-14 h-14 rounded-2xl ring-2 ring-gold/40 shadow-lg shadow-gold/20 group-hover:ring-gold/70 transition-all" />
           <div>
-            <p className="text-gold font-bold text-lg leading-none group-hover:text-gold-light transition-colors">IIIT Pune</p>
-            <p className="text-white/40 text-xs mt-0.5">Est. 2016</p>
+            <p className="text-gold font-bold text-lg leading-none group-hover:text-gold-light transition-colors">CampusSaathi</p>
+            <p className="text-white/40 text-xs mt-0.5">IIIT Pune knowledge assistant</p>
           </div>
         </div>
 
@@ -123,10 +123,10 @@ export default function LoginPage() {
         <div className="w-full max-w-md animate-scale-in">
           {/* Mobile logo */}
           <div className="auth-logo flex items-center gap-3 mb-8 lg:hidden cursor-pointer" onClick={() => navigate('/')}>
-            <img src="/iitp-logo.png" alt="IIIT Pune" className="w-12 h-12 rounded-full ring-2 ring-gold/40" />
+            <img src="/campussaathi-mark.svg" alt="CampusSaathi" className="w-12 h-12 rounded-2xl ring-2 ring-gold/40" />
             <div>
-              <p className="text-gold font-bold">IIIT Pune</p>
-              <p className="text-white/40 text-xs">Knowledge Assistant</p>
+              <p className="text-gold font-bold">CampusSaathi</p>
+              <p className="text-white/40 text-xs">IIIT Pune knowledge assistant</p>
             </div>
           </div>
 

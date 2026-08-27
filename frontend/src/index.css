@@ -251,6 +251,7 @@ select.input-dark option {
 .profile-avatar-large { width: 2.5rem; height: 2.5rem; font-size: 0.9rem; }
 .profile-chevron { color: rgba(255,255,255,0.4); font-size: 1rem; line-height: 1; }
 .profile-menu { position: absolute; right: 0; top: calc(100% + 0.65rem); z-index: 60; width: 15rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.13); border-radius: 1rem; background: #17244b; box-shadow: 0 18px 45px rgba(0,0,0,0.4); }
+.profile-menu-backdrop { display: none; }
 .profile-menu-header { position: relative; display: flex; align-items: center; gap: 0.65rem; padding: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .profile-muted { color: rgba(255,255,255,0.42); }
 .profile-role { display: inline-block; margin-top: 0.3rem; padding: 0.15rem 0.45rem; border-radius: 999px; color: var(--gold2); background: rgba(201,168,76,0.12); font-size: 0.6rem; font-weight: 600; }
@@ -265,6 +266,7 @@ select.input-dark option {
 .theme-light .profile-trigger:hover, .theme-light .profile-trigger.active { background: #eef3fb; border-color: #dbe4f2; color: #1e293b; }
 .theme-light .profile-chevron { color: #94a3b8; }
 .theme-light .profile-menu { border-color: #dbe4f2; background: #ffffff; box-shadow: 0 18px 45px rgba(30,55,100,0.2); }
+.theme-light .profile-menu-backdrop { background: rgba(20,35,65,0.48); }
 .theme-light .profile-menu-header, .theme-light .profile-menu-divider { border-color: #e5ebf4; background: transparent; }
 .theme-light .profile-menu-links button, .theme-light .profile-signout { color: #52627a; }
 .theme-light .profile-menu-links button:hover { color: #1e293b; background: #eef3fb; }
@@ -326,13 +328,22 @@ select.input-dark option {
   .auth-card h2 { font-size: 1.35rem; }
   .auth-card .grid-cols-2 { grid-template-columns: 1fr; }
   .demo-creds-card { padding: 0.75rem; }
+  .profile-menu-backdrop { display: block; position: fixed; inset: 0; z-index: 55; background: rgba(3,8,25,0.88); }
   .profile-menu {
     position: fixed;
-    top: 4.25rem;
-    right: 0.75rem;
-    width: min(15rem, calc(100vw - 1.5rem));
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: min(24rem, 78vh);
+    border-radius: 1.4rem 1.4rem 0 0;
+    background: #17244b;
+    box-shadow: 0 -18px 55px rgba(0,0,0,0.5);
+    animation: sheetUp 0.24s ease forwards;
   }
 }
+
+@keyframes sheetUp { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }
 
 /* ─── Role selection cards ───────────────────────────────────────────────────── */
 .role-card {

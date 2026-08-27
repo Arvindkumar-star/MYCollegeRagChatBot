@@ -59,9 +59,9 @@ export default function RegisterPage() {
       <div className="w-full max-w-lg relative z-10 animate-scale-in">
         {/* Logo header */}
         <div className="auth-logo flex items-center gap-3 mb-5 sm:mb-8 justify-center">
-          <img src="/iitp-logo.png" alt="IIIT Pune" className="w-14 h-14 rounded-full ring-2 ring-gold/40 shadow-lg shadow-gold/20" />
+          <img src="/campussaathi-mark.svg" alt="CampusSaathi" className="w-14 h-14 rounded-2xl ring-2 ring-gold/40 shadow-lg shadow-gold/20" />
           <div>
-            <p className="text-gold font-bold text-lg leading-none">IIIT Pune</p>
+            <p className="text-gold font-bold text-lg leading-none">CampusSaathi</p>
             <p className="text-white/40 text-xs mt-0.5">Create your account</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function RegisterPage() {
         <div className="auth-card glass-card p-4 sm:p-8">
           <div className="mb-7">
             <h2 className="text-2xl font-bold text-white">Create Account</h2>
-            <p className="text-white/40 text-sm mt-1">Join the IIIT Pune Knowledge Assistant</p>
+            <p className="text-white/40 text-sm mt-1">Join the CampusSaathi community</p>
           </div>
 
           {/* ─── Role selection ─── */}

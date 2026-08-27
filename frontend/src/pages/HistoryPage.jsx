@@ -145,13 +145,13 @@ export default function HistoryPage() {
             <ChevronLeft size={18} />
           </button>
           <img
-            src="/iitp-logo.png"
-            alt="IIIT Pune"
+            src="/campussaathi-mark.svg"
+            alt="CampusSaathi"
             className="w-8 h-8 rounded-full ring-1 ring-gold/30 cursor-pointer"
             onClick={() => navigate('/')}
           />
           <div>
-            <h1 className="text-sm font-bold text-white leading-none">IIIT Pune Knowledge Assistant</h1>
+            <h1 className="text-sm font-bold text-white leading-none">CampusSaathi</h1>
             <p className="text-[10px] text-white/30 mt-0.5">Conversation History</p>
           </div>
         </div>

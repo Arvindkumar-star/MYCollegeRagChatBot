@@ -47,13 +47,13 @@ export default function Sidebar({ conversations, activeId, onSelect, onNewChat, 
           title="Go to Home"
         >
           <img
-            src="/iitp-logo.png"
-            alt="IIIT Pune"
+            src="/campussaathi-mark.svg"
+            alt="CampusSaathi"
             className="w-9 h-9 rounded-full ring-2 ring-gold/30 group-hover:ring-gold/60 transition-all shadow-md shadow-gold/10"
           />
           <div>
-            <p className="text-gold font-semibold text-sm leading-none group-hover:text-gold-light transition-colors">IIIT Pune</p>
-            <p className="text-white/30 text-[10px] mt-0.5">Knowledge Assistant</p>
+            <p className="text-gold font-semibold text-sm leading-none group-hover:text-gold-light transition-colors">CampusSaathi</p>
+            <p className="text-white/30 text-[10px] mt-0.5">IIIT Pune assistant</p>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ function TypingIndicator() {
   return (
     <div className="flex justify-start mb-5 animate-fade-in">
       <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-brand to-blue-bright flex items-center justify-center mr-3 shrink-0 mt-1 shadow-lg shadow-blue-brand/30">
-        <img src="/iitp-logo.png" alt="" className="w-6 h-6 rounded-full" />
+        <img src="/campussaathi-mark.svg" alt="" className="w-6 h-6 rounded-lg" />
       </div>
       <div className="bubble-ai py-4 px-5 flex items-center gap-2">
         <span className="typing-dot" />
@@ -138,10 +138,10 @@ export default function ChatPage() {
             <button className="sm:hidden text-white/60 hover:text-white mr-1" onClick={(e) => { e.stopPropagation(); setSidebarOpen(true); }} aria-label="Open navigation menu">
               <Menu size={20} />
             </button>
-            <img src="/iitp-logo.png" alt="IIIT Pune" className="w-8 h-8 rounded-full ring-1 ring-gold/30 group-hover:ring-gold/60 transition-all" />
+            <img src="/campussaathi-mark.svg" alt="CampusSaathi" className="w-8 h-8 rounded-xl ring-1 ring-gold/30 group-hover:ring-gold/60 transition-all" />
             <div>
-              <h1 className="text-xs sm:text-sm font-semibold text-white leading-none group-hover:text-gold/90 transition-colors">IIIT Pune Knowledge Assistant</h1>
-              <p className="text-[9px] sm:text-[10px] text-white/30 mt-0.5">Answers sourced only from official documents</p>
+              <h1 className="text-xs sm:text-sm font-semibold text-white leading-none group-hover:text-gold/90 transition-colors">CampusSaathi</h1>
+              <p className="text-[9px] sm:text-[10px] text-white/30 mt-0.5">Official IIIT Pune knowledge assistant</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -166,7 +166,7 @@ export default function ChatPage() {
           {/* Empty state */}
           {isEmpty && (
             <div id="empty-state" className="flex flex-col items-center justify-center h-full text-center animate-fade-up">
-              <img src="/iitp-logo.png" alt="IIIT Pune" className="w-20 h-20 rounded-full ring-2 ring-gold/30 shadow-2xl shadow-gold/20 mb-6" />
+              <img src="/campussaathi-mark.svg" alt="CampusSaathi" className="w-20 h-20 rounded-3xl ring-2 ring-gold/30 shadow-2xl shadow-gold/20 mb-6" />
               <h2 className="text-2xl font-bold text-white mb-2">
                 How can I help you today?
               </h2>

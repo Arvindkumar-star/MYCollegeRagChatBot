@@ -43,6 +43,8 @@ export default function ProfileMenu({ compact = false }) {
       </button>
 
       {open && (
+        <>
+        <div className="profile-menu-backdrop" onClick={() => setOpen(false)} />
         <div className="profile-menu animate-scale-in" role="menu">
           <div className="profile-menu-header">
             <div className="profile-avatar profile-avatar-large">{user?.name?.[0]?.toUpperCase() || 'U'}</div>
@@ -61,6 +63,7 @@ export default function ProfileMenu({ compact = false }) {
           <div className="profile-menu-divider" />
           <button onClick={signOut} role="menuitem" className="profile-signout"><LogOut size={14} /> Sign out</button>
         </div>
+        </>
       )}
     </div>
   );

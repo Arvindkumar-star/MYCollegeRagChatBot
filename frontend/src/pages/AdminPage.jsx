@@ -318,8 +318,8 @@ export default function AdminPage() {
             <ArrowLeft size={16} />
           </button>
           <img
-            src="/iitp-logo.png"
-            alt="IIIT Pune"
+            src="/campussaathi-mark.svg"
+            alt="CampusSaathi"
             className="w-8 h-8 rounded-full ring-1 ring-gold/30 cursor-pointer hover:ring-gold/60 transition-all"
             onClick={() => navigate('/')}
             title="Home"

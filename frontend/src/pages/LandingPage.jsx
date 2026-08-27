@@ -96,10 +96,10 @@ export default function LandingPage() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'landing-nav-scrolled' : 'landing-nav'}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
-            <img src="/iitp-logo.png" alt="IIIT Pune" className="w-10 h-10 rounded-full ring-2 ring-gold/40 shadow-lg shadow-gold/20" />
+            <img src="/campussaathi-mark.svg" alt="CampusSaathi" className="w-10 h-10 rounded-xl ring-2 ring-gold/40 shadow-lg shadow-gold/20" />
             <div>
-              <p className="text-gold font-bold text-base leading-none">IIIT Pune</p>
-              <p className="text-white/30 text-[10px] mt-0.5 tracking-wide">Knowledge Assistant</p>
+              <p className="text-gold font-bold text-base leading-none">CampusSaathi</p>
+              <p className="text-white/30 text-[10px] mt-0.5 tracking-wide">IIIT Pune knowledge assistant</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -138,7 +138,7 @@ export default function LandingPage() {
 
         {/* Subtext */}
         <p className="text-white/50 text-base md:text-lg leading-relaxed max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          CampusMind connects directly to IIIT Pune's official syllabus, circulars, fee schedules,
+          CampusSaathi connects directly to IIIT Pune's official syllabus, circulars, fee schedules,
           exam rules, and placement notices. Every answer cites the exact source document and page — zero hallucinations, always verified.
         </p>
 
@@ -187,14 +187,14 @@ export default function LandingPage() {
       {/* ── Feature cards ────────────────────────────────────────────────── */}
       <section className="relative z-10 max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
-          <p className="text-gold/60 text-xs uppercase tracking-widest font-semibold mb-3">Why CampusMind</p>
+            <p className="text-gold/60 text-xs uppercase tracking-widest font-semibold mb-3">Why CampusSaathi</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white">Built for Accuracy, Not Guessing</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <FeatureCard
             icon={Shield}
             title="Zero Hallucinations"
-            desc="If an answer isn't in the uploaded college documents, CampusMind explicitly says 'I don't know' rather than making one up."
+            desc="If an answer isn't in the uploaded college documents, CampusSaathi explicitly says 'I don't know' rather than making one up."
             color="feature-icon-blue"
             delay="0s"
           />
@@ -289,7 +289,7 @@ export default function LandingPage() {
                 </span>
               </div>
               <p className="text-white/45 text-sm leading-relaxed">
-                All documents loaded into CampusMind are sourced exclusively from IIIT Pune's official publications.
+                All documents loaded into CampusSaathi are sourced exclusively from IIIT Pune's official publications.
                 Under the administration of <span className="text-gold font-semibold">Dr. Sanjeev Sharma</span>, Dean of Academic Affairs.
               </p>
             </div>
@@ -310,7 +310,7 @@ export default function LandingPage() {
             </div>
           </div>
           <h2 className="text-3xl font-bold text-white mb-3">Ready to get instant answers?</h2>
-          <p className="text-white/40 text-sm mb-8">Join students already using CampusMind to navigate college life effortlessly.</p>
+          <p className="text-white/40 text-sm mb-8">Join students already using CampusSaathi to navigate college life effortlessly.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               id="final-cta-chat-btn"
@@ -334,10 +334,10 @@ export default function LandingPage() {
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="relative z-10 border-t border-white/6 py-8 px-6 text-center">
         <div className="flex items-center justify-center gap-3 mb-3">
-          <img src="/iitp-logo.png" alt="IIIT Pune" className="w-7 h-7 rounded-full ring-1 ring-gold/30" />
+          <img src="/campussaathi-mark.svg" alt="CampusSaathi" className="w-7 h-7 rounded-lg ring-1 ring-gold/30" />
           <span className="text-white/30 text-sm">Indian Institute of Information Technology, Pune</span>
         </div>
-        <p className="text-white/15 text-xs">CampusMind answers exclusively from verified official college documents.</p>
+        <p className="text-white/15 text-xs">CampusSaathi answers exclusively from verified official college documents.</p>
       </footer>
     </div>
   );
