@@ -94,7 +94,7 @@ export default function LandingPage() {
 
       {/* ── Sticky navbar ────────────────────────────────────────────────── */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'landing-nav-scrolled' : 'landing-nav'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="landing-nav-inner max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
             <img src="/campussaathi-mark.svg" alt="CampusSaathi" className="w-10 h-10 rounded-xl ring-2 ring-gold/40 shadow-lg shadow-gold/20" />
             <div>
@@ -102,7 +102,7 @@ export default function LandingPage() {
               <p className="text-white/30 text-[10px] mt-0.5 tracking-wide">IIIT Pune knowledge assistant</p>
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="landing-nav-actions flex items-center gap-3">
             <button
               id="landing-admin-btn"
               onClick={() => navigate('/login')}
@@ -122,7 +122,7 @@ export default function LandingPage() {
       </nav>
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-20">
+      <section className="landing-hero relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-20">
         {/* Badge */}
         <div className="landing-badge animate-fade-up mb-6">
           <Sparkles size={12} className="text-gold" />
