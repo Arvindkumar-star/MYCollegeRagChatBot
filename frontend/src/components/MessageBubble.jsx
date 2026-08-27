@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, FileText, AlertTriangle, Copy } from 'lucide-react';
+import { ChevronDown, ChevronUp, FileText, AlertTriangle, Copy, RefreshCw, Check } from 'lucide-react';
 import { useState } from 'react';
 
 function ConfidenceBadge({ score }) {
@@ -14,6 +14,7 @@ function ConfidenceBadge({ score }) {
 
 function SourceCard({ source }) {
   const [open, setOpen] = useState(false);
+  const score = source.score ? `${Math.round(source.score * 100)}% match` : null;
   return (
     <div className="rounded-lg overflow-hidden border border-gold/15 bg-gold/5 text-xs">
       <button onClick={() => setOpen(!open)}
@@ -21,6 +22,7 @@ function SourceCard({ source }) {
         <FileText size={10} className="shrink-0" />
         <span className="font-medium truncate">{source.documentTitle}</span>
         {source.page && <span className="text-gold/40 shrink-0">p.{source.page}</span>}
+        {score && <span className="text-gold/40 shrink-0">{score}</span>}
         <span className="ml-auto shrink-0">{open ? <ChevronUp size={10} /> : <ChevronDown size={10} />}</span>
       </button>
       {open && source.excerpt && (
@@ -183,10 +185,18 @@ function isNotFoundResponse(message) {
   return noSources && looksLikeNotFound;
 }
 
-export default function MessageBubble({ message, onFeedback }) {
+export default function MessageBubble({ message, onFeedback, onRegenerate }) {
   const isUser = message.role === 'user';
   const [sourcesOpen, setSourcesOpen] = useState(false);
   const hasSources = message.sources?.length > 0;
+  const [copied, setCopied] = useState(false);
+
+  const copyAnswer = () => {
+    navigator.clipboard.writeText(message.content).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1600);
+    }).catch(() => {});
+  };
 
   // Show styled not-found notice for assistant messages with no sources + not-found phrasing
   if (isNotFoundResponse(message)) {
@@ -207,6 +217,18 @@ export default function MessageBubble({ message, onFeedback }) {
         ) : (
           <div className="bubble-ai">
             <MarkdownContent content={message.content} />
+
+            <div className="flex items-center gap-1 mt-3 pt-2 border-t border-white/8">
+              <button onClick={copyAnswer} className="message-action" title="Copy answer" aria-label="Copy answer">
+                {copied ? <Check size={12} /> : <Copy size={12} />}
+                <span>{copied ? 'Copied' : 'Copy'}</span>
+              </button>
+              {onRegenerate && (
+                <button onClick={() => onRegenerate(message)} className="message-action" title="Regenerate answer" aria-label="Regenerate answer">
+                  <RefreshCw size={12} /> <span>Regenerate</span>
+                </button>
+              )}
+            </div>
 
             {hasSources && (
               <div className="mt-3 pt-2 border-t border-white/8">

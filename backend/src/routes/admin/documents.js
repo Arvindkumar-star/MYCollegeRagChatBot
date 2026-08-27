@@ -76,7 +76,12 @@ router.get('/', authenticate, requireAdmin, async (req, res) => {
     .sort({ createdAt: -1 })
     .lean();
 
-  res.json(docs);
+  const docsWithCounts = await Promise.all(docs.map(async (doc) => ({
+    ...doc,
+    chunkCount: await Chunk.countDocuments({ documentId: doc._id }),
+  })));
+
+  res.json(docsWithCounts);
 });
 
 // GET /admin/documents/:id — single document

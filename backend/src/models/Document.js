@@ -10,6 +10,8 @@ const DocumentSchema = new Schema({
   isActive: { type: Boolean, default: true, index: true },
   summary: { type: String },           // auto-summarization bonus
   ocrUsed: { type: Boolean, default: false },
+  processingError: { type: String },
+  processedAt: { type: Date },
   status: {
     type: String,
     enum: ['processing', 'ready', 'failed'],

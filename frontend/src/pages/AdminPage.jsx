@@ -224,8 +224,14 @@ export default function AdminPage() {
 
   useEffect(() => { loadData(); }, []);
 
-  const loadData = async () => {
-    setLoading(true);
+  useEffect(() => {
+    if (!documents.some((doc) => doc.status === 'processing')) return undefined;
+    const timer = setInterval(() => loadData(false), 5000);
+    return () => clearInterval(timer);
+  }, [documents]);
+
+  const loadData = async (showLoading = true) => {
+    if (showLoading) setLoading(true);
     try {
       const [docs, cols] = await Promise.all([adminAPI.getDocuments(), adminAPI.getCollections()]);
       setDocuments(docs.data); setCollections(cols.data);
@@ -402,7 +408,10 @@ export default function AdminPage() {
                           <td>
                             <span className="text-white/40 text-xs">{doc.collectionId?.name || '—'}</span>
                           </td>
-                          <td>{statusBadge(doc.status)}</td>
+                          <td>
+                            <span title={doc.processingError || ''}>{statusBadge(doc.status)}</span>
+                            {doc.processingError && <p className="text-red-400/70 text-[10px] mt-1 max-w-[180px] truncate" title={doc.processingError}>{doc.processingError}</p>}
+                          </td>
                           <td><span className="text-white/50 text-xs">{doc.chunkCount || '—'}</span></td>
                           <td><span className="text-white/30 text-xs">v{doc.version}</span></td>
                           <td><span className="text-white/30 text-xs">{new Date(doc.createdAt).toLocaleDateString()}</span></td>

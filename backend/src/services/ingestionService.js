@@ -190,12 +190,17 @@ async function ingestDocument(documentId, filePath) {
     await Document.findByIdAndUpdate(documentId, {
       status: 'ready',
       ocrUsed,
+      processingError: null,
+      processedAt: new Date(),
       ...(summary && { summary }),
     });
     console.log(`[Ingestion] ✅ Document ${documentId} ready`);
   } catch (err) {
     console.error(`[Ingestion] ❌ Failed for document ${documentId}:`, err.message);
-    await Document.findByIdAndUpdate(documentId, { status: 'failed' });
+    await Document.findByIdAndUpdate(documentId, {
+      status: 'failed',
+      processingError: err.message.slice(0, 500),
+    });
   }
 }
 

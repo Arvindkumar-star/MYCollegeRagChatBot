@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar';
 import MessageBubble from '../components/MessageBubble';
 import ChatInput from '../components/ChatInput';
 import toast from 'react-hot-toast';
-import { Menu, MessageSquare, History, Sun, Moon } from 'lucide-react';
+import { Menu, MessageSquare, History, Sun, Moon, Settings } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 const SUGGESTED = [
@@ -92,6 +92,12 @@ export default function ChatPage() {
       toast.error(err.response?.data?.error || 'Failed to get response');
       setMessages(p => p.slice(0, -1));
     } finally { setSending(false); }
+  };
+
+  const handleRegenerate = (assistantMessage) => {
+    const index = messages.findIndex((message) => message._id === assistantMessage._id);
+    const previous = index > 0 ? messages[index - 1] : null;
+    if (previous?.role === 'user') handleSend(previous.content);
   };
 
   const handleFeedback = async (messageId, rating) => {
@@ -181,7 +187,8 @@ export default function ChatPage() {
 
           {/* Messages */}
           {!loading && messages.map(msg => (
-            <MessageBubble key={msg._id} message={msg} onFeedback={msg.role === 'assistant' ? handleFeedback : null} />
+            <MessageBubble key={msg._id} message={msg} onFeedback={msg.role === 'assistant' ? handleFeedback : null}
+              onRegenerate={msg.role === 'assistant' ? handleRegenerate : null} />
           ))}
 
           {sending && <TypingIndicator />}
@@ -189,6 +196,19 @@ export default function ChatPage() {
         </div>
 
         <ChatInput onSend={handleSend} disabled={sending} />
+        <nav className="mobile-bottom-nav sm:hidden" aria-label="Mobile navigation">
+          <button onClick={() => { handleNewChat(); navigate('/chat'); }} className="mobile-nav-item active">
+            <MessageSquare size={16} /><span>Chat</span>
+          </button>
+          <button onClick={() => navigate('/history')} className="mobile-nav-item">
+            <History size={16} /><span>History</span>
+          </button>
+          {user?.role === 'admin' && (
+            <button onClick={() => navigate('/admin')} className="mobile-nav-item">
+              <Settings size={16} /><span>Admin</span>
+            </button>
+          )}
+        </nav>
       </main>
     </div>
   );
