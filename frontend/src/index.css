@@ -250,7 +250,7 @@ select.input-dark option {
 .profile-avatar { width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 999px; color: white; background: linear-gradient(135deg, #1a4fba, #2563eb); font-size: 0.75rem; font-weight: 700; box-shadow: 0 0 0 1px rgba(255,255,255,0.12); }
 .profile-avatar-large { width: 2.5rem; height: 2.5rem; font-size: 0.9rem; }
 .profile-chevron { color: rgba(255,255,255,0.4); font-size: 1rem; line-height: 1; }
-.profile-menu { position: absolute; right: 0; top: calc(100% + 0.65rem); z-index: 60; width: 15rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.13); border-radius: 1rem; background: #17244b; box-shadow: 0 18px 45px rgba(0,0,0,0.4); }
+.profile-menu { position: fixed; z-index: 9999; width: 15rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.13); border-radius: 1rem; background: #17244b; box-shadow: 0 18px 45px rgba(0,0,0,0.4); }
 .profile-menu-backdrop { display: none; }
 .profile-menu-header { position: relative; display: flex; align-items: center; gap: 0.65rem; padding: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .profile-muted { color: rgba(255,255,255,0.42); }
@@ -272,6 +272,9 @@ select.input-dark option {
 .theme-light .profile-menu-links button:hover { color: #1e293b; background: #eef3fb; }
 .theme-light .profile-muted { color: #7b879b; }
 .theme-light .profile-close { color: #94a3b8; }
+
+/* Light theme admin warning banner text */
+.theme-light .text-white\/65 { color: #475569 !important; }
 
 /* ─── Light theme ──────────────────────────────────────────────────────────── */
 .theme-light {
@@ -328,8 +331,8 @@ select.input-dark option {
   .auth-card h2 { font-size: 1.35rem; }
   .auth-card .grid-cols-2 { grid-template-columns: 1fr; }
   .demo-creds-card { padding: 0.75rem; }
-  .profile-menu-backdrop { display: block; position: fixed; inset: 0; z-index: 55; background: rgba(3,8,25,0.97); }
-  .theme-light .profile-menu-backdrop { background: rgba(20,35,65,0.97); }
+  .profile-menu-backdrop { display: block; position: fixed; inset: 0; z-index: 9998; background: rgba(3,8,25,0.6); }
+  .theme-light .profile-menu-backdrop { background: rgba(20,35,65,0.5); }
   .profile-menu {
     position: fixed;
     top: 0;
@@ -341,6 +344,11 @@ select.input-dark option {
     background: #17244b;
     box-shadow: -18px 0 55px rgba(0,0,0,0.5);
     animation: drawerIn 0.24s ease forwards;
+    z-index: 9999;
+  }
+  .theme-light .profile-menu {
+    background: #ffffff;
+    box-shadow: -18px 0 55px rgba(30,55,100,0.3);
   }
 }
 
@@ -596,6 +604,9 @@ select.input-dark option {
 .portal-header {
   background: linear-gradient(90deg, #0b1437 0%, #0f1c4d 100%);
   border-bottom: 1px solid rgba(201,168,76,0.2);
+  overflow: visible;
+  position: relative;
+  z-index: 20;
 }
 
 /* Stat card */
