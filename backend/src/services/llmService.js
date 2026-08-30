@@ -13,7 +13,7 @@ async function callGroq(messages) {
     model: process.env.LLM_MODEL || 'openai/gpt-oss-20b',
     messages,
     temperature: 0.2,
-    max_tokens: 1024,
+    max_tokens: 2048,
   });
   return resp.choices[0].message.content;
 }
