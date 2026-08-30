@@ -175,6 +175,15 @@
   background: rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,0.35);
 }
+.theme-light .btn-ghost-light {
+  border-color: #cbd7ea;
+  color: #334155;
+}
+.theme-light .btn-ghost-light:hover {
+  background: #eef3fb;
+  border-color: #94a3b8;
+  color: #1e293b;
+}
 
 /* ─── Inputs ─────────────────────────────────────────────────────────────────── */
 .input-dark {
