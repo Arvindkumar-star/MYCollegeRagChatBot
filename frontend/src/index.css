@@ -637,6 +637,9 @@ select.input-dark option {
 }
 .tab-btn:hover { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.05); }
 .tab-btn.active { background: linear-gradient(135deg, #1a4fba, #2563eb); color: white; }
+.theme-light .tab-btn { color: #475569; }
+.theme-light .tab-btn:hover { color: #1e293b; background: rgba(26,79,186,0.08); }
+.theme-light .tab-btn.active { background: linear-gradient(135deg, #1a4fba, #2563eb); color: white; }
 
 /* Suggested question chip */
 .suggest-chip {
