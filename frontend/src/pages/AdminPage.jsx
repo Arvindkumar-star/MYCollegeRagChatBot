@@ -343,10 +343,10 @@ export default function AdminPage() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-8">
         {/* Tabs */}
-        <div className="flex items-center gap-1 mb-8 bg-white/4 rounded-xl p-1 w-fit border border-white/8">
+        <div className="flex items-center gap-1 mb-8 bg-white/4 rounded-xl p-1 border border-white/8 overflow-x-auto max-w-full">
           {TABS.map(({ id, label, icon: Icon }) => (
             <button key={id} id={`tab-${id}`} onClick={() => setTab(id)}
-              className={`tab-btn flex items-center gap-1.5 ${tab === id ? 'active' : ''}`}>
+              className={`tab-btn flex items-center gap-1.5 shrink-0 whitespace-nowrap ${tab === id ? 'active' : ''}`}>
               <Icon size={13} />{label}
             </button>
           ))}
