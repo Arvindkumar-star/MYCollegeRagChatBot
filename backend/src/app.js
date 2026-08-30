@@ -8,8 +8,23 @@ const path = require('path');
 const app = express();
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
+const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173')
+  .split(',')
+  .map(u => u.trim());
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: function (origin, callback) {
+    // Allow requests with no origin (mobile apps, curl, etc.)
+    if (!origin) return callback(null, true);
+    // Check exact match or Vercel preview pattern
+    if (
+      allowedOrigins.includes(origin) ||
+      /^https:\/\/my-college-rag-chat-bot.*\.vercel\.app$/.test(origin)
+    ) {
+      return callback(null, true);
+    }
+    callback(new Error('Not allowed by CORS'));
+  },
   credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
